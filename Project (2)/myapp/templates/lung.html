@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label>Select Lung X-ray/CT Image:</label>
+    <input type="file" name="lung_image" accept="image/*" required><br><br>
+    <button type="submit">Predict</button>
+</form>
+
+{% if result %}
+  <h2>Result: {{ result }}</h2>
+{% endif %}
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | HealthAI Center</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <script>
+    // Simple UI logic to show relevant input per model type
+    const select = document.querySelector('select[name="model_type"]');
+    const tabular = document.getElementById('input-tabular');
+    const image = document.getElementById('input-image');
+    select.addEventListener('change', function () {
+      if (this.value === "heart" || this.value === "kidney") {
+        tabular.style.display = "block";
+        image.style.display = "none";
+      } else if (this.value === "pneumonia" || this.value === "brain_tumor") {
+        tabular.style.display = "none";
+        image.style.display = "block";
+      } else {
+        tabular.style.display = "none";
+        image.style.display = "none";
+      }
+    });
+  </script>
+</body>
+
+</html>

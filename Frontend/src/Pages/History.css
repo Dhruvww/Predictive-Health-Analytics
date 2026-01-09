@@ -1,0 +1,100 @@
+/* Pagination container styling */
+.pagination-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Attractive button styling */
+.pagination-btn {
+  background: linear-gradient(45deg, #007bff, #00c6ff);
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: linear-gradient(45deg, #0056b3, #0095c6);
+  transform: translateY(-2px);
+}
+
+.pagination-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Pagination info text */
+.pagination-info {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.feedback-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.4;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feedback-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+/* Positive Feedback */
+.feedback-positive {
+  background-color: #e6f9f0;
+  color: #0b7c47;
+  border: 1px solid #b3ebd3;
+}
+
+/* Negative Feedback */
+.feedback-negative {
+  background-color: #fff3f3;
+  color: #b30000;
+  border: 1px solid #f5c2c2;
+}
+
+/* Neutral Feedback */
+.feedback-neutral {
+  background-color: #f8f9fa;
+  color: #555;
+  border: 1px solid #ddd;
+}
+
+
+.feedback-positive {
+  background-color: #4caf50; /* green */
+  color: white;
+}
+.feedback-warning {
+  background-color: #ff9800; /* orange */
+  color: white;
+}
+.feedback-danger {
+  background-color: #f44336; /* red */
+  color: white;
+}
+.feedback-info {
+  background-color: #2196f3; /* blue */
+  color: white;
+}
+.feedback-neutral {
+  background-color: gray;
+  color: white;
+}
+

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pneumonia Detection</title>
+</head>
+<body>
+    <h1>Pneumonia Detection from Chest X-ray</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="image" required multiple><br><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if results %}
+        <h2>Prediction: <span style="color:blue">{{ results }}</span></h2>
+    {% endif %}
+</body>
+</html>

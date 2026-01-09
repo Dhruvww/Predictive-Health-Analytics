@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Appointments | HealthAI Center</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav-bar">
+      <div class="logo">HealthAI</div>
+      <ul class="nav-links">
+        <li><a href="dashboard.html">Home</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="appointments.html" class="active-link">Appointments</a></li>
+        <li><a href="doctor.html">Consult Doctor</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="appointments-container">
+    <h2>Your Appointments</h2>
+    <table class="appointments-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Doctor</th>
+          <th>Specialty</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2025-07-30</td>
+          <td>11:00 AM</td>
+          <td>Dr. Mehta</td>
+          <td>Radiologist</td>
+          <td>Upcoming</td>
+        </tr>
+        <tr>
+          <td>2025-07-14</td>
+          <td>3:00 PM</td>
+          <td>Dr. Gupta</td>
+          <td>Nephrologist</td>
+          <td>Completed</td>
+        </tr>
+        <tr>
+          <td>2025-07-05</td>
+          <td>10:00 AM</td>
+          <td>Dr. Ahuja</td>
+          <td>Cardiologist</td>
+          <td>Completed</td>
+        </tr>
+        <!-- More rows as needed -->
+      </tbody>
+    </table>
+
+    <section class="book-appointment-section">
+      <h3>Book New Appointment</h3>
+      <form class="appointment-form" method="post">
+        <label>Date:</label>
+        <input type="date" name="date" required>
+        <label>Time:</label>
+        <input type="time" name="time" required>
+        <label>Doctor:</label>
+        <select name="doctor" required>
+          <option value="">-- Select Doctor --</option>
+          <option value="mehta">Dr. Mehta (Radiologist)</option>
+          <option value="gupta">Dr. Gupta (Nephrologist)</option>
+          <option value="ahuja">Dr. Ahuja (Cardiologist)</option>
+        </select>
+        <button type="submit" class="cta-btn">Book Appointment</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    &copy; 2025 HealthAI Center
+  </footer>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Profile | HealthAI Center</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav-bar">
+      <div class="logo">HealthAI</div>
+      <ul class="nav-links">
+        <li><a href="dashboard.html">Home</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="appointments.html">Appointments</a></li>
+        <li><a href="doctor.html">Consult Doctor</a></li>
+        <li><a href="profile.html" class="active-link">Profile</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="profile-container">
+    <h2>Your Profile</h2>
+    <div class="profile-info">
+      <img src="https://randomuser.me/api/portraits/men/91.jpg" alt="User Photo" class="profile-img"/>
+      <form class="profile-form" method="post">
+        <label>Full Name:</label>
+        <input type="text" name="fullname" value="Rohan Sharma" required />
+        <label>Email:</label>
+        <input type="email" name="email" value="rohan@email.com" required />
+        <label>Username:</label>
+        <input type="text" name="username" value="rohan123" required disabled />
+        <label>Change Password:</label>
+        <input type="password" name="password" placeholder="New Password"/>
+        <button type="submit" class="cta-btn">Update Profile</button>
+      </form>
+    </div>
+  </main>
+  <footer class="footer">
+    &copy; 2025 HealthAI Center
+  </footer>
+</body>
+</html>

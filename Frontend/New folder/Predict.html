@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Make Prediction | HealthAI Center</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav-bar">
+      <div class="logo">HealthAI</div>
+      <ul class="nav-links">
+        <li><a href="dashboard.html">Home</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="appointments.html">Appointments</a></li>
+        <li><a href="doctor.html">Consult Doctor</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="prediction-container">
+    <h2 class="prediction-title">Run a New Prediction</h2>
+    <form class="prediction-form" method="post" enctype="multipart/form-data">
+      <label>Select Prediction Type:</label>
+      <select name="model_type" required>
+        <option value="">Choose Model</option>
+        <option value="heart">Heart Disease (Tabular)</option>
+        <option value="kidney">Kidney Disease (Tabular)</option>
+        <option value="pneumonia">Pneumonia (Image)</option>
+        <option value="brain_tumor">Brain Tumor (Image)</option>
+      </select>
+
+      <div id="input-tabular" class="tabular-group" style="display:none;">
+        <label>Enter Tabular Data (Sample: CSV or manual input)</label>
+        <input type="file" name="tabular_file" accept=".csv"/>
+        <textarea name="tabular_text" rows="5" placeholder="Or paste CSV/data here"></textarea>
+      </div>
+      <div id="input-image" class="image-group" style="display:none;">
+        <label>Upload Image File (JPG/PNG, X-ray or MRI as required)</label>
+        <input type="file" name="image_file" accept="image/*"/>
+      </div>
+
+      <button type="submit" class="cta-btn">Predict</button>
+    </form>
+  </main>
+
+  <footer class="footer">
+    &copy; 2025 HealthAI Center
+  </footer>
+
+  <script>
+    // Simple UI logic to show relevant input per model type
+    const select = document.querySelector('select[name="model_type"]');
+    const tabular = document.getElementById('input-tabular');
+    const image = document.getElementById('input-image');
+    select.addEventListener('change', function() {
+      if (this.value === "heart" || this.value === "kidney") {
+        tabular.style.display = "block";
+        image.style.display = "none";
+      } else if (this.value === "pneumonia" || this.value === "brain_tumor") {
+        tabular.style.display = "none";
+        image.style.display = "block";
+      } else {
+        tabular.style.display = "none";
+        image.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>

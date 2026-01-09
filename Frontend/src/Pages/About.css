@@ -1,0 +1,202 @@
+body {
+  margin: 0;
+  background-color: #f0f5fa;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.navbar {
+  background-color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar h2 {
+  color: #007bff;
+  margin: 0;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.about-header {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.about-header h1 {
+  font-size: 32px;
+  color: #007bff;
+  margin-bottom: 0.5rem;
+}
+
+.about-header p {
+  font-size: 16px;
+  color: #555;
+}
+
+.about-content {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.about-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.about-section h3 {
+  color: #007bff;
+  margin-bottom: 0.8rem;
+}
+
+.about-section p,
+.about-section ul {
+  color: #444;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.about-section ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.about-section ul li::before {
+  content: '✔️';
+  margin-right: 8px;
+  color: #28a745;
+}
+
+.about-footer-btn {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.about-footer-btn button {
+  background-color: #ff7a00;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.about-footer-btn button:hover {
+  background-color: #e66b00;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 14px;
+  color: #999;
+  background: transparent;
+  margin-top: 2rem;
+}
+.team-section {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+}
+
+.team-section h2 {
+  color: #007bff;
+  margin-bottom: 2rem;
+}
+
+.team-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.team-member {
+  background: white;
+  padding: 1rem;
+  border-radius: 16px;
+  width: 200px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.team-member img {
+  width: 100%;
+  border-radius: 50%;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.team-member h4 {
+  margin: 0;
+  color: #007bff;
+}
+
+.team-member p {
+  font-size: 14px;
+  color: #555;
+}
+
+
+.team-member img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #007bff; 
+  padding: 4px;
+  background-color: white;
+}
+
+/* table */
+
+/* Appointments Table Styling */
+.appointment-table-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.appointment-table-section th,
+.appointment-table-section td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.appointment-table-section th {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: 600;
+}
+
+.appointment-table-section tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.appointment-table-section tr:hover {
+  background-color: #e6f0ff;
+  transition: 0.3s;
+}
+
+.appointment-table-section td {
+  color: #333;
+}

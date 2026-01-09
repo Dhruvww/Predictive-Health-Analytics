@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kidney Disease Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f6fc;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 900px;
+            max-height: 90vh;
+            overflow-y: auto;
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-radius: 12px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .form-group {
+            flex: 1 1 45%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3367d6;
+        }
+
+        .result {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <h1>Kidney Disease Prediction</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {% comment %} Replace all textboxes with select/dropdown if needed later {% endcomment %}
+
+        <div class="form-group"><label>Age</label><input type="text" name="age"></div>
+        <div class="form-group"><label>Blood Pressure (bp)</label><input type="text" name="bp"></div>
+        <div class="form-group"><label>Specific Gravity (sg)</label><input type="text" name="sg"></div>
+        <div class="form-group"><label>Albumin (al)</label><input type="text" name="al"></div>
+        <div class="form-group"><label>Sugar (su)</label><input type="text" name="su"></div>
+        <div class="form-group"><label>Red Blood Cells (rbc)</label><input type="text" name="rbc"></div>
+        <div class="form-group"><label>Pus Cell (pc)</label><input type="text" name="pc"></div>
+        <div class="form-group"><label>Pus Cell Clumps (pcc)</label><input type="text" name="pcc"></div>
+        <div class="form-group"><label>Bacteria (ba)</label><input type="text" name="ba"></div>
+        <div class="form-group"><label>Blood Glucose Random (bgr)</label><input type="text" name="bgr"></div>
+        <div class="form-group"><label>Blood Urea (bu)</label><input type="text" name="bu"></div>
+        <div class="form-group"><label>Serum Creatinine (sc)</label><input type="text" name="sc"></div>
+        <div class="form-group"><label>Sodium (sod)</label><input type="text" name="sod"></div>
+        <div class="form-group"><label>Potassium (pot)</label><input type="text" name="pot"></div>
+        <div class="form-group"><label>Hemoglobin (hemo)</label><input type="text" name="hemo"></div>
+        <div class="form-group"><label>Packed Cell Volume (pcv)</label><input type="text" name="pcv"></div>
+        <div class="form-group"><label>White Blood Cell Count (wc)</label><input type="text" name="wc"></div>
+        <div class="form-group"><label>Red Blood Cell Count (rc)</label><input type="text" name="rc"></div>
+        <div class="form-group"><label>Hypertension (htn)</label><input type="text" name="htn"></div>
+        <div class="form-group"><label>Diabetes Mellitus (dm)</label><input type="text" name="dm"></div>
+        <div class="form-group"><label>Coronary Artery Disease (cad)</label><input type="text" name="cad"></div>
+        <div class="form-group"><label>Appetite (appet)</label><input type="text" name="appet"></div>
+        <div class="form-group"><label>Pedal Edema (pe)</label><input type="text" name="pe"></div>
+        <div class="form-group"><label>Anemia (ane)</label><input type="text" name="ane"></div>
+
+        <div style="flex: 1 1 100%;">
+            <button type="submit">Predict</button>
+        </div>
+    </form>
+
+    {% if result is not None %}
+        <div class="result">Prediction Result: {{ message }}</div>
+    {% endif %}
+</div>
+
+</body>
+</html>
